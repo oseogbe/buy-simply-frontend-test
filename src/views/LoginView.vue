@@ -10,8 +10,17 @@ function togglePasswordVisibility() {
 
 <template>
   <div class="min-h-screen flex">
-    <div class="bg-[#F8EAFF] flex-1 hidden sm:block">
-
+    <div class="bg-[#F8EAFF] hidden sm:flex flex-1 flex-col justify-center">
+      <div class="mx-auto p-12">
+        <img src="/img/logo.svg" alt="Logo" class="w-[198px]" />
+        <div class="mt-10">
+          <img src="/img/happy-people.png" alt="happy people" />
+        </div>
+        <div class="text-center">
+          <h1 class="text-[#61227D] font-bold text-xl leading-[44px] mt-10">Team Achieve</h1>
+          <p class="text-[#5E5E5E] mt-1 text-lg">Your perfect solution for funding your desires</p>
+        </div>
+      </div>
     </div>
     <div class="flex-1 flex flex-col justify-center bg-[#FCFCFC]">
       <div class="mx-auto p-8">
@@ -23,12 +32,12 @@ function togglePasswordVisibility() {
           <form class="mt-8 space-y-6">
             <div>
               <label for="email" class="block text-[#5E5E5E] text-sm sm:text-base">Email Address <span class="text-red-500">*</span></label>
-              <input type="email" id="email" class="w-full border border-[#E5E5E5] text-sm sm:text-base rounded-[8px] p-2" />
+              <input type="email" id="email" class="w-full border border-[#E5E5E5] text-sm sm:text-base rounded-[8px] px-4 py-2" />
             </div>
             <div>
               <label for="password" class="block text-[#5E5E5E] text-sm sm:text-base">Password <span class="text-red-500">*</span></label>
               <div class="relative">
-                <input :type="showPassword ? 'text' : 'password'" id="password" class="w-full border border-[#E5E5E5] text-sm sm:text-base rounded-[8px] p-2 pr-10" />
+                <input :type="showPassword ? 'text' : 'password'" id="password" class="w-full border border-[#E5E5E5] text-sm sm:text-base rounded-[8px] pl-4 p-2 pr-10" />
                 <span @click="togglePasswordVisibility" class="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer">
                   <font-awesome-icon :icon="showPassword ? 'eye-slash' : 'eye'" />
                 </span>
